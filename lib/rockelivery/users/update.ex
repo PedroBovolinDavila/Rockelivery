@@ -1,6 +1,6 @@
 defmodule Rockelivery.Users.Update do
-  alias Rockelivery.{Repo, User, Error}
   alias Ecto.UUID
+  alias Rockelivery.{Error, Repo, User}
 
   def call(%{"id" => id} = params) do
     case UUID.cast(id) do

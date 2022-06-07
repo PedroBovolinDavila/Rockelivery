@@ -1,6 +1,6 @@
 defmodule Rockelivery.Users.Delete do
-  alias Rockelivery.{Error, Repo, User}
   alias Ecto.UUID
+  alias Rockelivery.{Error, Repo, User}
 
   def call(id) do
     case UUID.cast(id) do
