@@ -10,7 +10,7 @@ defmodule Rockelivery.Order do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
 
-  @derive {Jason.Encoder, only: @required_params ++ [:id]}
+  @derive {Jason.Encoder, only: @required_params ++ [:id, :items]}
 
   schema "orders" do
     field :address, :string
