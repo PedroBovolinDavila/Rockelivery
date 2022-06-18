@@ -8,6 +8,7 @@ defmodule Rockelivery.Order do
   @payment_methods [:money, :credit_card, :debit_card]
 
   @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
 
   @derive {Jason.Encoder, only: @required_params ++ [:id]}
 
